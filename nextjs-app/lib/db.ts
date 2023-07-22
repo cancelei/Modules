@@ -1,4 +1,3 @@
-```typescript
 import { MongoClient } from 'mongodb';
 
 const uri = process.env.DATABASE_URI || '';
@@ -26,4 +25,3 @@ export async function disconnectFromDB() {
 
   return true;
 }
-```
