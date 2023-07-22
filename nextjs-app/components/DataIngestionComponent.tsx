@@ -7,18 +7,23 @@ const DataIngestionComponent: React.FC = () => {
 
   useEffect(() => {
     const ingestData = async () => {
-      const db = await connectToDB();
-      const apiData = await fetchData();
-      const scrapedData = await scrapeData();
-
-      const allData = [...apiData, ...scrapedData];
-      allData.forEach(async (item) => {
-        await db.collection('data').insertOne(item);
-      });
-
-      setData(allData);
+      try {
+        const db = await connectToDB();
+        const apiData = await fetchData();
+        const scrapedData = await scrapeData();
+  
+        const allData = [...apiData, ...scrapedData];
+        allData.forEach(async (item) => {
+          await db.collection('data').insertOne(item);
+        });
+  
+        setData(allData);
+      } catch (error) {
+        console.error('Error ingesting data:', error);
+        // handle the error (e.g., set an error state, show an error message)
+      }
     };
-
+  
     ingestData();
   }, []);
 

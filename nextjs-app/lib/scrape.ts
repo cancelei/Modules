@@ -1,22 +1,18 @@
 import axios from 'axios';
 import cheerio from 'cheerio';
 
-export async function scrapeData(url: string) {
+export async function scrapeData() {
   try {
-    const response = await axios.get(url);
-    const html = response.data;
-    const $ = cheerio.load(html);
-    const scrapedData = [];
-
-    // Add your scraping logic here
-    // For example, to scrape all paragraph texts from a webpage:
-    // $('p').each((index, element) => {
-    //   scrapedData.push($(element).text());
-    // });
-
-    return scrapedData;
+    const response = await axios.get('http://books.toscrape.com/');
+    const $ = cheerio.load(response.data);
+    const books = [];
+    $('.product_pod').each((index, element) => {
+      const title = $(element).find('h3 a').attr('title');
+      const price = $(element).find('.price_color').text();
+      books.push({ title, price });
+    });
+    return books;
   } catch (error) {
-    console.error(`Error occurred while scraping data from ${url}: ${error}`);
-    return null;
+    console.error(`Error scraping data: ${error}`);
   }
 }
