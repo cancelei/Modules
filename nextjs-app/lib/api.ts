@@ -18,13 +18,12 @@ export async function fetchDataFromAPI(apiUrl: string) {
   }
 }
 
-export async function saveDataToDatabase(data: any) {
+export async function saveDataToDatabase(data: any, collectionName: string) {
   try {
     const client = new MongoClient(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     await client.connect();
     const db = client.db(DB_NAME);
-    // Assuming the data should be saved to a collection named 'dataCollection'
-    const collection = db.collection('dataCollection');
+    const collection = db.collection(collectionName);
     await collection.insertOne(data);
     await client.close();
   } catch (error) {
