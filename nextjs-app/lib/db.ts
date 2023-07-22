@@ -1,27 +1,26 @@
 import { MongoClient } from 'mongodb';
 
-const uri = process.env.DATABASE_URI || '';
-const options = {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-};
+// Load environment variables from .env file
+import dotenv from 'dotenv';
+dotenv.config();
 
-let db: any;
+// Get database URI and name from environment variables
+const DB_URI = process.env.DATABASE_URI;
+const DB_NAME = process.env.DATABASE_NAME;
 
-export async function connectToDB() {
-  if (db) return db;
+let cachedDb = null;
 
-  const client = new MongoClient(uri, options);
-  db = client.db(process.env.DATABASE_NAME);
+export async function connectToDatabase() {
+  if (cachedDb) {
+    return cachedDb;
+  }
 
+  const client = await MongoClient.connect(DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  const db = client.db(DB_NAME);
+  cachedDb = db;
   return db;
-}
-
-export async function disconnectFromDB() {
-  if (!db) return true;
-
-  await db.close();
-  db = undefined;
-
-  return true;
 }
