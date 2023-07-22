@@ -1,25 +1,23 @@
 Shared Dependencies:
 
-1. **Next.js**: All the files in the "next-app" directory will share the Next.js framework as a dependency. This includes the server-side rendering and routing features of Next.js.
+1. **Next.js**: This is the main framework used across all the files for server-side rendering and routing. It is imported in "next.config.js", "pages/index.tsx", "pages/api/dataIngestion.ts", and "components/DataIngestionComponent.tsx".
 
-2. **TypeScript**: All the ".tsx" and ".ts" files will share TypeScript as a dependency for type checking and improved developer experience.
+2. **TypeScript**: TypeScript is used for type checking and improved developer experience. It is used in all ".tsx" and ".ts" files including "pages/index.tsx", "pages/api/dataIngestion.ts", "components/DataIngestionComponent.tsx", "lib/db.ts", "lib/api.ts", and "lib/scrape.ts".
 
-3. **Database Connection**: The "db.ts" file will export the database connection which could be used by the "dataIngestion.ts" file in the API and the "DataIngestion.tsx" component.
+3. **Database Connection**: The database connection is established in "lib/db.ts" and this connection is shared across "pages/api/dataIngestion.ts" and "components/DataIngestionComponent.tsx" for data ingestion.
 
-4. **Data Ingestion Module**: The "DataIngestion.tsx" component and the "dataIngestion.ts" API file will share the data ingestion functionality. This could include functions for connecting to databases, APIs, and scraping data.
+4. **API Functions**: The functions to connect to APIs are defined in "lib/api.ts" and are used in "pages/api/dataIngestion.ts" and "components/DataIngestionComponent.tsx".
 
-5. **CSS Styles**: The "globals.css" file will contain global styles that could be used across all the ".tsx" files in the "pages" and "components" directories.
+5. **Scraping Functions**: The functions to scrape data from websites are defined in "lib/scrape.ts" and are used in "pages/api/dataIngestion.ts" and "components/DataIngestionComponent.tsx".
 
-6. **Favicon**: The "favicon.ico" file in the "public" directory will be used by all the pages in the "pages" directory.
+6. **Data Ingestion Component**: The Data Ingestion Component is defined in "components/DataIngestionComponent.tsx" and is used in "pages/index.tsx".
 
-7. **Package.json**: This file will contain all the dependencies for the project, which will be shared across all the files.
+7. **Global Styles**: The global styles are defined in "styles/globals.css" and are used in "pages/index.tsx" and "components/DataIngestionComponent.tsx".
 
-8. **tsconfig.json**: This file will contain the TypeScript configuration which will be shared across all the ".ts" and ".tsx" files.
+8. **Favicon**: The favicon is stored in "public/favicon.ico" and is used in "pages/index.tsx".
 
-9. **React**: As Next.js is built on top of React, all ".tsx" files will share React as a dependency.
+9. **Package.json**: This file contains the list of dependencies and scripts for the project. It is used by all the files indirectly.
 
-10. **DOM Elements**: Any DOM elements with specific id names used in the JavaScript functions across the ".tsx" files will be shared dependencies.
+10. **tsconfig.json**: This file contains the configuration for TypeScript. It is used by all ".ts" and ".tsx" files indirectly.
 
-11. **Message Names**: Any message names used for communication between the modules could be shared dependencies.
-
-12. **Function Names**: Any functions that are used across multiple files will be shared dependencies.
+11. **next.config.js**: This file contains the configuration for Next.js. It is used by all the files indirectly.

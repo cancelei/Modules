@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import DataIngestion from '../components/DataIngestion';
+import DataIngestionComponent from '../components/DataIngestionComponent';
+import '../styles/globals.css';
 
 const Home: React.FC = () => {
   return (
@@ -12,11 +13,11 @@ const Home: React.FC = () => {
 
       <main>
         <h1>Welcome to the Data Ingestion Module</h1>
-        <DataIngestion />
+        <DataIngestionComponent />
       </main>
 
       <footer>
-        <p>© 2022 - AI for Small Businesses</p>
+        <p>© 2022 - Data Ingestion Module</p>
       </footer>
     </div>
   );
