@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import DataIngestionComponent from '../components/DataIngestionComponent';
-import '../styles/globals.css';
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
+import DataIngestionComponent from "./DataIngestionComponent";
+import "../styles/globals.css";
 
 const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const startScraping = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/startScraping');
+      const response = await fetch("/api/startScraping");
       // Handle the response...
     } catch (err) {
       console.error(err);
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const fetchScrapingStatus = async () => {
-      const response = await fetch('/api/scrapingStatus');
+      const response = await fetch("/api/scrapingStatus");
       const data = await response.json();
       setScrapingStatus(data);
     };
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       <main>
         <h1>Welcome to the Data Ingestion Module</h1>
         <button onClick={startScraping} disabled={isLoading}>
-          {isLoading ? 'Scraping...' : 'Start Scraping'}
+          {isLoading ? "Scraping..." : "Start Scraping"}
         </button>
         {scrapingStatus && (
           <div>
