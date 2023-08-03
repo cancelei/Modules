@@ -1,28 +1,19 @@
 {
   "name": "nextjs-app",
   "version": "1.0.0",
-  "description": "Analyze the folder: nextjs-app and write a Blueprint File (called Blueprint.md) that has the function to be the blueprint of what you need to create a better version of the app on the next run.",
+  "description": "Blueprint for Next.js App",
   "main": "pages/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "keywords": ["nextjs", "react"],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/nextjs-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yourusername/nextjs-app/issues"
-  },
-  "homepage": "https://github.com/yourusername/nextjs-app#readme"
+  }
 }

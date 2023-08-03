@@ -1,62 +1,49 @@
-# Next.js App Blueprint
+# Blueprint for Next.js App
 
-This is a blueprint for a Next.js application. The application analyzes the folder structure and generates a blueprint file for creating a better version of the app on the next run.
+This is a Next.js application that serves as a blueprint for future projects. It includes a main entry point, a custom App component, an API route, and several other features.
 
-## Files
+## Files and their purpose:
 
-The application consists of the following files:
+- `pages/index.js`: The main entry point of the application. It uses React, Next, ReactDOM, next/image, next/link, and Home.module.css from the styles folder.
 
-- `pages/index.js`: The main page of the application.
-- `pages/_app.js`: The custom App component.
-- `pages/api/hello.js`: An API route.
-- `public/favicon.ico`: The favicon for the application.
-- `public/vercel.svg`: An SVG file used in the application.
-- `styles/globals.css`: The global styles for the application.
-- `styles/Home.module.css`: The styles for the Home component.
-- `.gitignore`: The gitignore file for the application.
-- `package.json`: The package.json file for the application.
-- `Blueprint.md`: The blueprint file for the application.
+- `pages/_app.js`: The custom App component. It uses React, Next, ReactDOM, globals.css from the styles folder, and favicon.ico from the public folder.
 
-## Dependencies
+- `pages/api/hello.js`: An API route that returns a greeting message. It uses React, Next, ReactDOM, and the handler function.
 
-The application uses the following dependencies:
+- `public/favicon.ico`: The icon that appears in the browser tab.
 
-- React
-- Next.js
-- ReactDOM
-- next/image
-- next/link
+- `public/vercel.svg`: An SVG image used in the application.
 
-## Running the Application
+- `styles/globals.css`: The global CSS file used across the application.
 
-To run the application, use the following command:
+- `styles/Home.module.css`: A CSS module used in the main entry point of the application.
 
-```
-npm run dev
-```
+- `.gitignore`: Specifies intentionally untracked files to ignore.
 
-This will start the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `package.json`: Contains metadata about the app.
 
-## Building the Application
+- `Blueprint.md`: Contains the blueprint of the app.
 
-To build the application for production, use the following command:
+## Shared dependencies:
 
-```
-npm run build
-```
+- React, Next, ReactDOM: Used in all .js files.
+- next/image, next/link: Used in index.js.
+- styles folder: Used in index.js and _app.js.
+- Home.module.css, globals.css: Used in index.js and _app.js respectively.
+- favicon.ico, vercel.svg: Used in _app.js and index.js respectively.
+- hello.js: Used in index.js.
+- package.json, .gitignore, README.md, Blueprint.md: Used in all .js files.
+- export default function: Used in all .js files.
+- getServerSideProps: Used in index.js.
+- Component, pageProps: Used in _app.js.
+- handler, req, res: Used in hello.js.
 
-This will create a .next folder with the compiled application.
+## To create a better version of the app on the this run:
 
-## Deploying the Application
-
-To deploy the application, use the following command:
-
-```
-npm start
-```
-
-This will start the application in production mode.
-
-## Creating a Blueprint
-
-To create a blueprint of the application, run the application and navigate to [http://localhost:3000/blueprint](http://localhost:3000/blueprint). This will generate a Blueprint.md file in the root directory of the application.
+- Ensure all dependencies are up-to-date.
+- Optimize images and SVGs.
+- Minify and modularize CSS.
+- Improve API response time.
+- Add more detailed information in README.md and Blueprint.md.
+- Add more specific rules in .gitignore.
+- Improve the overall structure and organization of the code.

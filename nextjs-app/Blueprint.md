@@ -38,7 +38,7 @@
 - Component, pageProps: Used in _app.js.
 - handler, req, res: Used in hello.js.
 
-## To create a better version of the app on the next run:
+## To create a better version of the app on the this run:
 
 - Ensure all dependencies are up-to-date.
 - Optimize images and SVGs.
