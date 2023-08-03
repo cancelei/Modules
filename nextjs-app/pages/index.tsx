@@ -1,7 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import DataIngestionComponent from '../components/DataIngestionComponent';
-import '../styles/globals.css';
+import React from "react";
+import Head from "next/head";
+import DataIngestionComponent from "../components/DataIngestionComponent";
 
 const Home: React.FC = () => {
   return (
