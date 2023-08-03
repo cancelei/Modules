@@ -1,39 +1,28 @@
 {
   "name": "nextjs-app",
   "version": "1.0.0",
-  "description": "A Next.js application designed to make applied AI accessible to small businesses with a data ingestion module.",
-  "main": "index.js",
+  "description": "Analyze the folder: nextjs-app and write a Blueprint File (called Blueprint.md) that has the function to be the blueprint of what you need to create a better version of the app on the next run.",
+  "main": "pages/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "type-check": "tsc --noEmit"
+    "start": "next start"
   },
-  "keywords": [
-    "nextjs",
-    "react",
-    "typescript",
-    "data ingestion",
-    "AI"
-  ],
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/nextjs-app.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^1.4.0",
-    "cheerio": "^1.0.0-rc.12",
-    "mongodb": "^5.7.0",
-    "next": "^13.4.12",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+  "bugs": {
+    "url": "https://github.com/yourusername/nextjs-app/issues"
   },
-  "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/cheerio": "^0.22.31",
-    "@types/node": "^20.4.4",
-    "@types/react": "^18.2.15",
-    "eslint": "^8.45.0",
-    "eslint-config-next": "^13.4.12",
-    "typescript": "^5.1.6"
-  }
+  "homepage": "https://github.com/yourusername/nextjs-app#readme"
 }

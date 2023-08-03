@@ -1,54 +1,62 @@
-# Next.js App
+# Next.js App Blueprint
 
-This is a Next.js application designed to make applied AI accessible to small businesses. The main feature of this application is the Data Ingestion Module, which is responsible for collecting data from various sources.
+This is a blueprint for a Next.js application. The application analyzes the folder structure and generates a blueprint file for creating a better version of the app on the next run.
 
-## Getting Started
+## Files
 
-First, run the development server:
+The application consists of the following files:
 
-```bash
+- `pages/index.js`: The main page of the application.
+- `pages/_app.js`: The custom App component.
+- `pages/api/hello.js`: An API route.
+- `public/favicon.ico`: The favicon for the application.
+- `public/vercel.svg`: An SVG file used in the application.
+- `styles/globals.css`: The global styles for the application.
+- `styles/Home.module.css`: The styles for the Home component.
+- `.gitignore`: The gitignore file for the application.
+- `package.json`: The package.json file for the application.
+- `Blueprint.md`: The blueprint file for the application.
+
+## Dependencies
+
+The application uses the following dependencies:
+
+- React
+- Next.js
+- ReactDOM
+- next/image
+- next/link
+
+## Running the Application
+
+To run the application, use the following command:
+
+```
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Tech Stack
+## Building the Application
 
-- Next.js for server-side rendering and routing
-- Database of your choice (be mindful to choose an easy solution)
-- TypeScript for type checking and improved developer experience
+To build the application for production, use the following command:
 
-## Features
+```
+npm run build
+```
 
-- Server-side rendering for improved performance
-- Data Ingestion Module: Connects to different types of databases, APIs, and even scrapes data from websites or social media platforms. It can also handle real-time data streams.
+This will create a .next folder with the compiled application.
 
-## Project Structure
+## Deploying the Application
 
-- `next.config.js`: Contains the configuration for Next.js.
-- `tsconfig.json`: Contains the configuration for TypeScript.
-- `pages/index.tsx`: The main page of the application.
-- `pages/api/dataIngestion.ts`: The API for the Data Ingestion Module.
-- `components/DataIngestionComponent.tsx`: The component for the Data Ingestion Module.
-- `lib/db.ts`: Establishes the database connection.
-- `lib/api.ts`: Defines the functions to connect to APIs.
-- `lib/scrape.ts`: Defines the functions to scrape data from websites.
-- `styles/globals.css`: Contains the global styles.
-- `public/favicon.ico`: The favicon for the application.
+To deploy the application, use the following command:
 
-## Potential Errors
+```
+npm start
+```
 
-- Make sure to install all the dependencies listed in `package.json`.
-- Ensure the database connection in `lib/db.ts` is correctly set up.
-- Check the API and scraping functions in `lib/api.ts` and `lib/scrape.ts` respectively for any errors.
-- If there are any issues with the styles, check `styles/globals.css`.
+This will start the application in production mode.
 
-## Contributing
+## Creating a Blueprint
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+To create a blueprint of the application, run the application and navigate to [http://localhost:3000/blueprint](http://localhost:3000/blueprint). This will generate a Blueprint.md file in the root directory of the application.

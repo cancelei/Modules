@@ -1,23 +1,22 @@
-Shared Dependencies:
-
-1. **Next.js**: This is the main framework used across all the files for server-side rendering and routing. It is imported in "next.config.js", "pages/index.tsx", "pages/api/dataIngestion.ts", and "components/DataIngestionComponent.tsx".
-
-2. **TypeScript**: TypeScript is used for type checking and improved developer experience. It is used in all ".tsx" and ".ts" files including "pages/index.tsx", "pages/api/dataIngestion.ts", "components/DataIngestionComponent.tsx", "lib/db.ts", "lib/api.ts", and "lib/scrape.ts".
-
-3. **Database Connection**: The database connection is established in "lib/db.ts" and this connection is shared across "pages/api/dataIngestion.ts" and "components/DataIngestionComponent.tsx" for data ingestion.
-
-4. **API Functions**: The functions to connect to APIs are defined in "lib/api.ts" and are used in "pages/api/dataIngestion.ts" and "components/DataIngestionComponent.tsx".
-
-5. **Scraping Functions**: The functions to scrape data from websites are defined in "lib/scrape.ts" and are used in "pages/api/dataIngestion.ts" and "components/DataIngestionComponent.tsx".
-
-6. **Data Ingestion Component**: The Data Ingestion Component is defined in "components/DataIngestionComponent.tsx" and is used in "pages/index.tsx".
-
-7. **Global Styles**: The global styles are defined in "styles/globals.css" and are used in "pages/index.tsx" and "components/DataIngestionComponent.tsx".
-
-8. **Favicon**: The favicon is stored in "public/favicon.ico" and is used in "pages/index.tsx".
-
-9. **Package.json**: This file contains the list of dependencies and scripts for the project. It is used by all the files indirectly.
-
-10. **tsconfig.json**: This file contains the configuration for TypeScript. It is used by all ".ts" and ".tsx" files indirectly.
-
-11. **next.config.js**: This file contains the configuration for Next.js. It is used by all the files indirectly.
+1. "React": A JavaScript library for building user interfaces, used in all .js files.
+2. "Next": A React framework, used in all .js files.
+3. "ReactDOM": A package that provides DOM-specific methods, used in all .js files.
+4. "next/image": An optimized image component from Next.js, used in index.js.
+5. "next/link": A component that allows client-side transitions between routes, used in index.js.
+6. "styles": A folder containing CSS files, used in index.js and _app.js.
+7. "Home.module.css": A CSS module used in index.js.
+8. "globals.css": A global CSS file used in _app.js.
+9. "favicon.ico": An icon file used in _app.js.
+10. "vercel.svg": An SVG file used in index.js.
+11. "hello.js": An API route file used in index.js.
+12. "package.json": A file that contains metadata about the app, used in all .js files.
+13. ".gitignore": A file that specifies intentionally untracked files to ignore, used in all .js files.
+14. "README.md": A file that contains information about the app, used in all .js files.
+15. "Blueprint.md": A file that contains the blueprint of the app, used in all .js files.
+16. "export default function": A function that is exported by default from a module, used in all .js files.
+17. "getServerSideProps": A Next.js function used in index.js.
+18. "Component": A React component used in _app.js.
+19. "pageProps": A prop used in _app.js.
+20. "handler": A function used in hello.js.
+21. "req": A request object used in hello.js.
+22. "res": A response object used in hello.js.
